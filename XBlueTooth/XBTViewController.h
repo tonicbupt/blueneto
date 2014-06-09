@@ -7,7 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreBluetooth/CoreBluetooth.h>
 
-@interface XBTViewController : UIViewController
+@interface XBTViewController : UIViewController<CBPeripheralDelegate, CBCentralManagerDelegate>
+
+@property (nonatomic) CBCentralManager *manager;
+@property (nonatomic) NSMutableArray *devices;
+
+@property (nonatomic) UIButton *button;
 
 @end
